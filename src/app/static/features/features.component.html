@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="main-heading">Create Request</h1>
+    </div>
+  </div>
+  <div class="row align-items-end">
+    <div class="col-md-6 col-lg-4" [ngClass]="routeAnimationsElements">
+      <mat-card>
+          <form  #flightRequestForm="ngForm" (ngSubmit)="onSubmit(flightRequestForm.value)">
+            <div class="example-container">
+              <!--Name-->
+              <mat-form-field>
+                <input required matInput placeholder="Name" name="nameOfApplicant" [(ngModel)]="nameOfApplicant">
+              </mat-form-field>
+              <!--Date-->
+              <mat-form-field>
+                <input required matInput placeholder="Travel Date" type="date" name="travelDate" [(ngModel)]="travelDate">
+              </mat-form-field>
+              <!--Destination-->
+              <mat-form-field>
+                <input required matInput placeholder="Destination" name="destination" [(ngModel)]="destination">
+              </mat-form-field>
+            </div>
+            <mat-card-actions>
+              <button mat-button type="submit">Send Flight Request</button>
+            </mat-card-actions>
+          </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

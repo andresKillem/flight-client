@@ -1,0 +1,44 @@
+<!--<ul>
+  <li *ngFor="let flight of flightRequest">
+    <a>
+      <span>{{ flight.nameOfApplicant || -1 }}</span>
+      <span>{{ flight.travelDate || -1 }}</span>
+      <span>{{ flight.destination || -1 }}</span>
+    </a>
+
+  </li>
+</ul>
+-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>
+       Flights Requested
+      </h2>
+      <mat-card *ngFor="let todo of flightRequest" class="todo">
+        <mat-checkbox class="todo-done"
+                      [checked]="todo.status"
+                      (change)="bookeFlightRequest(todo)">
+        </mat-checkbox>
+        <span class="todo-label"
+              [ngClass]="{ 'todo-label-done': todo.status == 'BOOKED' }"
+              (click)="bookeFlightRequest(todo)">
+          &nbsp;{{todo.nameOfApplicant}}&nbsp;
+        </span>
+        <span class="todo-label">
+          &nbsp;{{todo.destination}}&nbsp;
+        </span>
+        <span class="todo-label">
+          &nbsp;{{todo.destination}}&nbsp;
+        </span>
+        <span class="todo-label">
+          &nbsp;{{todo.status}}&nbsp;
+        </span>
+      </mat-card>
+      <br>
+      <br>
+    </div>
+  </div>
+
+</div>
+

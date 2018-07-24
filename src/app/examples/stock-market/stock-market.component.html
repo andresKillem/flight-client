@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="main-heading">New Flight Request</h1>
+    </div>
+  </div>
+  <div class="row">
+    <!--<div class="col-md-6 col-lg-3">-->
+      <!--<form autocomplete="false">-->
+        <!--<mat-form-field>-->
+          <!--<input matInput placeholder="Stock symbol"-->
+                 <!--[value]="stocks.symbol"-->
+                 <!--(keyup)="onSymbolChange($event.target.value)">-->
+        <!--</mat-form-field>-->
+      <!--</form>-->
+      <!--<p>-->
+        <!--Please search via Client Name-->
+      <!--</p>-->
+      <!--<br>-->
+    <!--</div>-->
+    <div class="col-md-6 col-lg-6">
+      <mat-card *ngFor="let request of flightRequest">
+        <mat-card-title>{{request.nameOfApplicant}}
+                    <span>{{request.destination}}</span>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <p>
+            Status:
+            {{request.status}}
+          </p>
+        </mat-card-subtitle>
+        <mat-card-subtitle>
+          <p>
+            Creation Date:
+            {{request.createdAt}}
+          </p>
+        </mat-card-subtitle>
+        <mat-card-content>Travel date {{request.travelDate}}</mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
