@@ -3,7 +3,7 @@ by [@andrec087](https://twitter.com/andrec087)
 
 ## Table of Content
 
-  * [Demo](https://tomastrajan.github.io/angular-ngrx-material-starter)
+  * [Demo](https://youtu.be/lMivZSvZJXA)
   * [Architecture](#getting-started)
   * [Useful Commands](#useful-commands)
   
