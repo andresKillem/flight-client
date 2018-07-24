@@ -10,10 +10,9 @@ by [@andrec087](https://twitter.com/andrec087)
 
 ## Getting started
 ```bash
-git clone https://github.com/tomastrajan/angular-ngrx-material-starter.git new-project
-cd new-project
+git clone https://andresmunoz@bitbucket.org/andresmunoz/flight-client.git
 npm install
-npm start
+ng serve --open
 ```
 
 ## Useful Commands
